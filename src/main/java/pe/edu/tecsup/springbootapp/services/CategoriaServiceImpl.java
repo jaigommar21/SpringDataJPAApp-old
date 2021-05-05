@@ -35,7 +35,7 @@ public class CategoriaServiceImpl implements CategoriaService {
 	@Override
 	public List<Categoria> findByNombreAndOrden(String nombre, Integer orden) {
 		// TODO Auto-generated method stub
-		return findByNombreAndOrden(nombre, orden);
+		return categoriaRepository.findByNombreAndOrden(nombre, orden);
 	}
 
 
