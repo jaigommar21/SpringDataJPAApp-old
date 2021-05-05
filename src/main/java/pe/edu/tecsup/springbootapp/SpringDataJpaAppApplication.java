@@ -2,6 +2,7 @@ package pe.edu.tecsup.springbootapp;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,20 @@ public class SpringDataJpaAppApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
+
+		List<Categoria> categorias 
+			= categoriaService.findByNombre("Memorias");
 		
+		log.info(categorias.toString());
+		
+		Categoria categoria 
+			= categoriaService.findById(Long.valueOf(1)).get();
+	
+		log.info(categoria.toString());
+	
+		
+		
+		/*
 		List<Categoria> categorias = categoriaService.findAll();
 		
 		log.info(" - Lista de Categorias -------------- ");
@@ -78,7 +92,7 @@ public class SpringDataJpaAppApplication implements CommandLineRunner {
 			log.info("--> " + producto);
 		}
 		log.info(" ----------------------------------- ");
-		
+		*/
 	}
 
 

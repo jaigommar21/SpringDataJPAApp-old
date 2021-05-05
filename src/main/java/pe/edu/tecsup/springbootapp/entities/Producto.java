@@ -12,6 +12,12 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.AccessLevel; 
+import lombok.AllArgsConstructor; 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//@Data
 @Entity
 @Table(name = "productos")
 public class Producto {
@@ -137,6 +143,5 @@ public class Producto {
 				+ ", precio=" + precio + ", stock=" + stock + ", imagen_nombre=" + imagen_nombre + ", imagen_tipo="
 				+ imagen_tipo + ", imagen_tamanio=" + imagen_tamanio + ", creado=" + creado + ", estado=" + estado + "]";
 	}
-
 
 }
